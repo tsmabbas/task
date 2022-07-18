@@ -3,7 +3,6 @@
 #Docker Install
 
 #Update the OS
-
 sudo apt-get update
 
 #Install curl
