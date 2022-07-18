@@ -16,5 +16,7 @@
 
 # pip3 install flask flask_sqlalchemy flask_login
 
+docker swarm init
+
 docker stack deploy --compose-file docker-compose.yaml task
 
