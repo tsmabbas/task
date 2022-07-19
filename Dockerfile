@@ -1,7 +1,7 @@
 # Python base image.
 FROM python:3.10
-# Create and set the work directory inside the image named 'app'
-WORKDIR /app
+# Create and set the work directory inside the image named 'task'
+WORKDIR /task
 # Execute a pip install command using the list 'requirements.txt'
 RUN pip install Flask
 # Copy the app file into the image working directory
