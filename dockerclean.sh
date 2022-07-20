@@ -1,3 +1,4 @@
+!# /bin/bash
 cd
 rm -rf task
 docker rm -f $(docker ps -a -q)
