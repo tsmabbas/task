@@ -2,8 +2,12 @@
 FROM python:3.10
 # Create and set the work directory inside the image named 'task'
 WORKDIR /task
-ENV SECRET_KEY: $SECRET_KEY
-ENV DATABASE_URI: $DATABASE_URI
+
+ARG SECRET_KEY
+ENV SECRET_KEY: ${SECRET_KEY}
+
+ARG DATABASE_URI
+ENV DATABASE_URI: ${DATABASE_URI}
 # Execute a pip install command using the list 'requirements.txt'
 RUN pip3 install Flask Flask_Login flask_sqlalchemy 
 # Copy the app file into the image working directory
