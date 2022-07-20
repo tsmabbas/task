@@ -3,7 +3,7 @@
 version: "3.8"
 services:
   flask-app:
-    build: ./task
+    build: ./task/task
     ports:
     - target: 5000
       published: 5000
@@ -11,8 +11,8 @@ services:
     environment:
       # YOUR_ENV_VARIABLE: ${YOUR_ENV_VARIABLE}  
       # YOUR_ENV_VARIABLE: ${YOUR_ENV_VARIABLE} 
-      SECRET_KEY: $SECRET_KEY
-      DATABASE_URI: $DATABASE_URI
+      SECRET_KEY: ${SECRET_KEY}
+      DATABASE_URI: ${DATABASE_URI}
   nginx:
     image: nginx:latest
     ports:
