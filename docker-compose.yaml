@@ -3,7 +3,7 @@
 version: "3.8"
 services:
   flask-app:
-    build: ./task/task
+    build: ./task/
     ports:
     - target: 5000
       published: 5000
