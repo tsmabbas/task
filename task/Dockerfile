@@ -5,7 +5,7 @@ WORKDIR /task
 ENV SECRET_KEY: $SECRET_KEY
 ENV DATABASE_URI: $DATABASE_URI
 # Execute a pip install command using the list 'requirements.txt'
-RUN pip install Flask
+RUN pip install Flask Flask_Login
 # Copy the app file into the image working directory
 COPY . .
 # State the listening port for the container. 
