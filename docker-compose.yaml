@@ -3,13 +3,13 @@
 version: "3.8"
 services:
   flask-app:
-          image: docker.io/library/task_flask-app
+        image: docker.io/library/task_flask-app
      deploy:
-          replicas: 3
+        replicas: 3
       ports:
-        - target: 5000
-          published: 5000
-          protocol: tcp
+      - target: 5000
+        published: 5000
+        protocol: tcp
     # environment:
     # #   # YOUR_ENV_VARIABLE: ${YOUR_ENV_VARIABLE}  
     # #   # YOUR_ENV_VARIABLE: ${YOUR_ENV_VARIABLE} 
