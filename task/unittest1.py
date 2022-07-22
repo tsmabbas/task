@@ -9,7 +9,7 @@ except Exception as e:
 class FlaskTest(unitest.TestCase):
 
     #Check for response 200
-    def test_index(self)
+    def test_index(self):
         tester = app.test_client(self)
         response = tester.get("/")
         statuscode = response.status_code
