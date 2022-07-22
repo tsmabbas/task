@@ -1,6 +1,6 @@
 
 try:
-    From task.app import app
+    From app import app
     import unittest
 
 except Exception as e:
@@ -11,7 +11,7 @@ class FlaskTest(unitest.TestCase):
     #Check for response 200
     def test_index(self)
         tester = app.test_client(self)
-        response = tester.get("/home")
+        response = tester.get("/")
         statuscode = response.status_code
         self.assertEqual(statuscode, 200)
 
