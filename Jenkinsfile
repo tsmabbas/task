@@ -1,13 +1,21 @@
 pipeline{
         agent any
         stages{
-            stage('Clone Source'){
+            stage('Docker Swarm1'){
                 steps{
-                    sh "rm -rf task"
-                    sh "git clone https://github.com/tsmabbas/task.git"
-                    sh "cd task"
-                    sh "sudo chmod 666 /var/run/docker.sock"
-                    sh "docker compose up"
+
+                    sh "docker stack deploy --compose-file docker-compose taskstack"
+
+                    // sh "rm -rf task"
+                    // sh "git clone https://github.com/tsmabbas/task.git"
+                    // sh "cd task"
+                    // sh "sudo chmod 666 /var/run/docker.sock"
+                    // sh "docker compose up"
+                    // #!/bin/bash
+
+// git clone https://github.com/tsmabbas/task.git
+// cd task
+// sudo -E SECRET_KEY=${SECRET_KEY} -E DATABASE_URI=${DATABASE_URI} docker-compose up -d
 
                 }
             }
