@@ -4,8 +4,8 @@ pipeline{
             stage('Docker Swarm1'){
                 steps{
 
-                    sh "docker stack deploy --compose-file docker-compose.yaml taskstack"
-
+                    sh "docker stack deploy -E SECRET_KEY=${SECRET_KEY} -E DATABASE_URI=${DATABASE_URI} --compose-file docker-compose.yaml taskstack"
+                    // sudo -E SECRET_KEY=${SECRET_KEY} -E DATABASE_URI=${DATABASE_URI} docker-compose up -d
                     // sh "rm -rf task"
                     // sh "git clone https://github.com/tsmabbas/task.git"
                     // sh "cd task"
