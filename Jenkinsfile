@@ -4,7 +4,7 @@ pipeline{
             stage('Docker Swarm1'){
                 steps{
 
-                    sh "docker stack deploy --compose-file docker-compose taskstack"
+                    sh "docker stack deploy --compose-file docker-compose.yaml taskstack"
 
                     // sh "rm -rf task"
                     // sh "git clone https://github.com/tsmabbas/task.git"
