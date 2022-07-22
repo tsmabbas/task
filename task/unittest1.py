@@ -15,5 +15,23 @@ class FlaskTest(unittest.TestCase):
         statuscode = response.status_code
         self.assertEqual(statuscode, 200)
 
+    def test_index1(self):
+        tester = app.test_client(self)
+        response = tester.get("/home")
+        statuscode = response.status_code
+        self.assertEqual(statuscode, 200)
+
+    def test_index1(self):
+        tester = app.test_client(self)
+        response = tester.get("/login")
+        statuscode = response.status_code
+        self.assertEqual(statuscode, 200)  
+
+    def test_index1(self):
+        tester = app.test_client(self)
+        response = tester.get("/sign_up")
+        statuscode = response.status_code
+        self.assertEqual(statuscode, 200)          
+
 if __name__ == "__main__":    
     unittest.main()
