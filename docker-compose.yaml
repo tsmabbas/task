@@ -3,7 +3,7 @@
 version: "3.8"
 services:
   flask-app:
-      image: task_flask-app
+      image: 909cd38e8713
     deploy:
       replicas: 3
     ports:

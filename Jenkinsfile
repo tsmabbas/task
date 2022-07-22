@@ -3,7 +3,7 @@ pipeline{
         stages{
             stage('Docker Swarm1'){
                 steps{
-                    sh "docker run -d -p 5001:5000 --name  task_flask-app myapp1"
+                    sh "docker run -d -p 5001:5000 --name myapp1 task_flask-app"
 
                     // sh "docker stack deploy -e SECRET_KEY=${SECRET_KEY} -e DATABASE_URI=${DATABASE_URI} --compose-file docker-compose.yaml taskstack"
                     // sudo -E SECRET_KEY=${SECRET_KEY} -E DATABASE_URI=${DATABASE_URI} docker-compose up -d
