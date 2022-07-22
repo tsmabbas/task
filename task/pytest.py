@@ -1,6 +1,6 @@
 
 import pytest
-from task.app import User
+from app import User
  
  
 @pytest.fixture(scope='module')
