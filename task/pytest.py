@@ -1,4 +1,3 @@
-import pytest
 
 import pytest
 from task.app import User
