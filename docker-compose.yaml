@@ -3,7 +3,7 @@
 version: "3.8"
 services:
   flask-app:
-          image: task_flask-app:latest
+          image: docker.io/library/task_flask-app
      deploy:
           replicas: 3
       ports:
